@@ -5,7 +5,7 @@ PyBenchTime v0.0.1
 
 A light benchmark timer class for Python. PyBenchTime is quite simple to use and is loaded with functionality
 - including detailed summary data, readable source, a lap system and pause/unpause functionality.
-This is the Python version of the popular [PHPBenchTime](https://github.com/jsanc623/PHPBenchTime) PHP Package.
+This is the Python version of the popular [PHPBenchTime](https://github.com/nsa-yoda/PHPBenchTime) PHP Package.
 
 Package Methods and Properties
 =======
