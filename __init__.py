@@ -8,13 +8,7 @@ def int_or_str(value):
         return value
 
 
-__version__ = '0.0.1'
-VERSION = tuple(map(int_or_str, __version__.split('.')))
+__version__ = "1.0.0"
+VERSION = tuple(map(int_or_str, __version__.split(".")))
 
-__all__ = [
-    'Timer',
-    'STOPPED',
-    'RUNNING',
-    'PAUSED',
-    'get_current_time'
-]
+__all__ = ["Timer", "STOPPED", "RUNNING", "PAUSED", "get_current_time"]

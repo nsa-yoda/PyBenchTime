@@ -1,4 +1,4 @@
-PyBenchTime v0.0.1
+PyBenchTime v1.0.0
 ===================
 
 [![License](https://poser.pugx.org/jsanc623/phpbenchtime/license.svg)](https://packagist.org/packages/jsanc623/phpbenchtime)
