@@ -85,41 +85,69 @@ you to determine what part of your code is causing a bottleneck.
 
 Let's sleep for a couple of seconds between laps and end the timer
 ```
-sleep(1);
-T.lap();
-sleep(2);
-T.lap();
-time = T.end();
+t = Timer()
+t.lap()
+sleep(0.25)
+t.lap("some lap")
+sleep(0.25)
+t.lap()
+sleep(0.25)
+t.lap()
+sleep(0.25)
+t.lap()
+sleep(0.25)
+t.lap()
+sleep(0.25)
+t.end()
+print(t.summary())
 ```
 
 Let's see the results:
 ```
 {
-    [running] => false
-    [start] => 1406146951.9998
-    [end] => 1406146952.0638
-    [total] => 0.063999891281128
-    [paused] => 0.041000127792358
-    [laps] => {
-        [0] => {
-            [name] => start
-            [start] => 1406146951.9998
-            [end] => 1406146952.0018
-            [total] => 0.0019998550415039
-        },
-        [1] => {
-            [name] => 1
-            [start] => 1406146952.0018
-            [end] => 1406146952.0028
-            [total] => 0.0010001659393311
-        },
-        [2] => {
-            [name] => 2
-            [start] => 1406146952.0028
-            [end] => 1406146952.0128
-            [total] => 0.0099999904632568
-        }
+  "running": -1,
+  "start": 1680097616.183986,
+  "end": 1680097617.712832,
+  "total": 1.528846025466919,
+  "paused": 0,
+  "laps": {
+    "0": {
+      "name": 0,
+      "start": 1680097616.183987,
+      "end": 1680097616.439072,
+      "total": 0.2550849914550781
+    },
+    "1": {
+      "name": "some lap",
+      "start": 1680097616.439083,
+      "end": 1680097616.6939561,
+      "total": 0.25487303733825684
+    },
+    "2": {
+      "name": 2,
+      "start": 1680097616.69396,
+      "end": 1680097616.949068,
+      "total": 0.255108118057251
+    },
+    "3": {
+      "name": 3,
+      "start": 1680097616.949089,
+      "end": 1680097617.203616,
+      "total": 0.25452685356140137
+    },
+    "4": {
+      "name": 4,
+      "start": 1680097617.203635,
+      "end": 1680097617.4584541,
+      "total": 0.2548191547393799
+    },
+    "5": {
+      "name": 5,
+      "start": 1680097617.458477,
+      "end": 1680097617.712865,
+      "total": 0.25438809394836426
     }
+  }
 }
 ```
 

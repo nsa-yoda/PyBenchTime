@@ -12,7 +12,6 @@ def test_start():
     t = Timer()
     t.start()
     assert t.state == RUNNING
-    print(t.pretty_summary(json=json))
 
 
 def test_end():

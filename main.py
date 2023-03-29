@@ -33,13 +33,14 @@ class Timer:
         # Total lap count, inclusive of the current lap
         self._lap_count = -1
 
-    def start(self, name="start"):
+    def start(self, name="start", lap=True):
         """Starts the timer"""
         self.state = RUNNING
         self._start_time = get_current_time()
 
         # Create a lap with this start time
-        self.lap(name)
+        if lap:
+            self.lap(name)
 
     def end(self):
         """Ends the timer"""
@@ -50,6 +51,9 @@ class Timer:
 
     def lap(self, name=None):
         """Ends the current lap and creates a new lap in lap object"""
+        if self._start_time == 0:
+            self.start(lap=False)
+
         self._lap_count += 1
         self._end_lap()
 
@@ -86,7 +90,6 @@ class Timer:
         """Initiates a pause in the timer"""
         self.state = PAUSED
         self._pause_time = get_current_time()
-        print(self.state, self._pause_time)
 
     def unpause(self):
         """Cancels the pause previously set"""
